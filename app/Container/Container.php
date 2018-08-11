@@ -8,6 +8,13 @@ use Exception;
 class Container
 {
     /**
+     * The current globally container instance.
+     *
+     * @var self
+     */
+    protected static $instance;
+
+    /**
      * Store bindings.
      *
      * @var array
@@ -126,5 +133,14 @@ class Container
         }
 
         return $class->newInstanceArgs($args);
+    }
+
+    public static function getInstance(): self
+    {
+        if (is_null(static::$instance)) {
+            static::$instance = new static;
+        }
+
+        return static::$instance;
     }
 }

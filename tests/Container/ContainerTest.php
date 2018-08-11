@@ -67,6 +67,14 @@ class ContainerTest extends TestCase
         $this->expectException(EntryNotFoundException::class);
         $this->container->make(Yummy::class);
     }
+
+    /** @test */
+    public function it_can_resolve_current_globally_container()
+    {
+        $globalContainer = Container::getInstance();
+        $this->assertInstanceOf(Container::class, $globalContainer);
+        $this->assertSame($globalContainer, Container::getInstance());
+    }
 }
 
 class Foo
