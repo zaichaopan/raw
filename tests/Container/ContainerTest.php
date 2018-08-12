@@ -1,8 +1,8 @@
 <?php
 
-use App\Container\Container;
+use Core\Container\Container;
 use PHPUnit\Framework\TestCase;
-use App\Container\EntryNotFoundException;
+use Core\Container\EntryNotFoundException;
 
 class ContainerTest extends TestCase
 {

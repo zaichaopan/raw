@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Provider;
+namespace Core\Provider;
 
 use App\Container\Container;
 

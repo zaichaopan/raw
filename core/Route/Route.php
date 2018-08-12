@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Route;
+namespace Core\Route;
 
 use App\Container\Container;
 
